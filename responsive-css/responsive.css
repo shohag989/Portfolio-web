@@ -1,0 +1,56 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header, .content, .footer {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header, .content, .footer {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .header, .content, .footer {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .header, .footer {
+        width: 100%;
+    }
+
+    .content {
+        width: 75%;
+    }
+}
