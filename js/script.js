@@ -7,9 +7,9 @@ window.addEventListener("scroll", function () {
 
 var typed = new Typed(".auto_input", {
     strings: [
-        "Web Designer", "Web Developer", "SEO Mearketer"
+        "Web Designer", "Web Developer", "Graphic Designer", "Video editor"
     ],
-    typeSpeed: 100,
-    backSpeed: 100,
+    typeSpeed: 90,
+    backSpeed: 110,
     loop: true
 })
