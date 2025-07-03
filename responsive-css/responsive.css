@@ -119,7 +119,7 @@
         margin-top: 70px;
     }
     .banner_image_img {
-        max-width: 80%;
+        max-width: 90%; /* Increased size for mobile */
         height: auto;
         margin: 30px auto; /* Added top and bottom margin */
     }
