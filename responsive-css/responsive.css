@@ -1,56 +1,175 @@
-/* Base styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Mobile styles */
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
+@media (max-width: 1400px) {
+    header {
+        padding: 10px 3%;
+        transition: .2s;
     }
+    section {
+        padding: 100px 3% 80px;
+        transition: .2s;
+    }
+}
 
-    .header, .content, .footer {
+@media (max-width: 1400px) {
+    header {
+        padding: 10px 3%;
+        transition: .2s;
+    }
+    section {
+        padding: 100px 3% 80px;
+        transition: .2s;
+    }
+    :root {
+        --h1-font: 4.5rem;
+        --h2-font: 2.5rem;
+        --p-font: 1rem;
+    }
+}
+
+@media (max-width: 1090px) {
+    .logo img {
+        max-width: 100px; /* Adjust logo size for medium screens */
+    }
+    .about {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .about_img {
+        text-align: center;
+    }
+    .about_img img {
+        max-width: 450px;
         width: 100%;
-        margin: 0;
+        height: auto;
+    }
+    .about_text {
+        text-align: center;
+    }
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .left_contect {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .right_contact {
+        text-align: center;
     }
 }
 
-/* Tablet styles */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .container {
-        padding: 15px;
-    }
-
-    .header, .content, .footer {
+@media (max-width: 800px) {
+    .nav_menu {
+        display: none; /* Hide the main navigation on mobile */
+        flex-direction: row; /* Changed to row to align items horizontally */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        background-color: var(--bg-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        margin: 0;
+        padding: 20px 0;
+    }
+    .nav_menu.active {
+        display: flex; /* Show the navigation when active */
+    }
+    .nav_list {
+        flex-grow: 0;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow items to wrap if space is limited */
+    }
+    .nav_list li {
+        margin: 10px 15px; /* Add some horizontal margin for spacing */
+    }
+    .menu-icon {
+        display: block !important;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--text-color);
+        z-index: 1001;
+    }
+    .banner {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally when flex-direction is column */
+        padding-top: 80px;
+    }
+    .banner_text {
+        text-align: left;
+        padding: 0 15px;
+    }
+    .banner_text h1 {
+        font-size: 3.5rem;
+    }
+    header {
+        padding: 10px 3%;
+    }
+    .banner_text h4 {
+        font-size: 1.5rem;
+    }
+    .banner_image {
+        margin-top: 70px;
+    }
+    .banner_image_img {
+        max-width: 80%;
+        height: auto;
+        margin: 30px auto; /* Added top and bottom margin */
+    }
+    .service_item {
+        grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    }
+    .contact-info-content {
+        flex-direction: column;
+    }
+    .contact-info-svg img {
+        margin-top: 30px;
+    }
+    .skills {
+        padding: 0 10px;
     }
 }
 
-/* Desktop styles */
-@media (min-width: 1025px) {
-    .container {
-        max-width: 1200px;
+@media (max-width: 500px) {
+    :root {
+        --h1-font: 3.5rem;
+        --h2-font: 2rem;
     }
-
-    .header, .content, .footer {
-        display: inline-block;
-        vertical-align: top;
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
     }
-
-    .header, .footer {
-        width: 100%;
+    .banner_text h3 {
+        font-size: 18px;
     }
-
-    .content {
-        width: 75%;
+    .banner_text h4 {
+        font-size: 1.2rem;
+    }
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    .banner_image_img {
+        max-width: 70%;
+    }
+    .banner_image {
+        margin: 10% 0;
+    }
+    .service_box {
+        padding: 30px 20px;
+    }
+    .in i {
+        font-size: 60px;
+    }
+    .end_section h3 {
+        font-size: 22px;
+    }
+    .end_section p {
+        font-size: 0.9rem;
+    }
+    .tech-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 }

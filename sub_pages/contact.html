@@ -6,32 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--// Custom-css-Links/Start //-->
     <link rel="icon" type="image/x-icon" href="image/icon.png">
-    <link rel="stylesheet" href="responsive-css/responsive.css">
+    <link rel="stylesheet" href="../responsive-css/responsive.css">
     <link rel="stylesheet" href="../css/style.css">
     <!--// Custom-css-Links/End //-->
     <title>Home/shohag_sr899PortfolioWebPage</title>
+    <!--// Icon-Javascript/Start //-->
+    <script src="https://kit.fontawesome.com/a42041f0f5.js" crossorigin="anonymous"></script>
+    <!--// Icon-Javascript/End //-->
 </head>
 
 <body>
-    <!--// Navigation/Start //-->
-    <header>
-        <div class="nav_logo">
-            <a href="../index.html" class="logo"><img src="../image/logo.png" alt="Logo"></a>
-            <div class="bx bx_menu"></div>
+        <!--// Navigation/Start //-->
+        <header class="container">
+            <div class="nav_logo">
+                <a href="" class="logo"><img src="../image/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="nav_menu">
+                <ul class="nav_list">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="Protfolio.html">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </div>
+        </header>
+        <!--// Navigation/End //-->
+    <!--// Contact Info and SVG Section/Start //-->
+    <section class="contact-info-section container">
+        <div class="contact-info-content">
+            <div class="contact-info-text">
+                <h2>Get In Touch</h2>
+                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+            </div>
+            <div class="contact-info-svg">
+                <img src="../image/Seeking development.gif" alt="Contact Illustration">
+            </div>
         </div>
-        <div class="nav_menu">
-            <ul class="nav_list">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="Protfolio.html">Protfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    </section>
+    <!--// Contact Info and SVG Section/End //-->
+
+    <!--// Contact Form Section/Start //-->
+    <section class="contact-form-section container">
+        <div class="contact-form-container">
+            <form action="http://localhost:3000/send-email" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
         </div>
-    </header>
-    <!--// Navigation/End //-->
+    </section>
+    <!--// Contact Form Section/End //-->
+
     <!--// Footer/Start //-->
     <section class="end_section">
-        <h3>Shohag SR</h3>
+        <h3>Shohag</h3>
         <p>For more HTML, CSS, and coding Tamplate - please click on the <br > link below to subscribe to my channel oR UserName(shohag_sr989)</p>
         <div class="iconns">
             <a href="https://www.facebook.com/shohag.sr989/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -47,8 +92,10 @@
     <script src="https://kit.fontawesome.com/a42041f0f5.js" crossorigin="anonymous"></script>
     <!--// Icon-Javascript/End //-->
     <!--// Custom-Javascript/Start //-->
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/theme-toggle.js"></script>
     <!--// Custom-Javascript/End //-->
+    </div>
 </body>
 
 </html>

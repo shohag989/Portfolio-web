@@ -6,32 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--// Custom-css-Links/Start //-->
     <link rel="icon" type="image/x-icon" href="image/icon.png">
-    <link rel="stylesheet" href="responsive-css/responsive.css">
+    <link rel="stylesheet" href="../responsive-css/responsive.css">
     <link rel="stylesheet" href="../css/style.css">
     <!--// Custom-css-Links/End //-->
     <title>Home/shohag_sr899PortfolioWebPage</title>
+    <!--// Icon-Javascript/Start //-->
+    <script src="https://kit.fontawesome.com/a42041f0f5.js" crossorigin="anonymous"></script>
+    <!--// Icon-Javascript/End //-->
 </head>
 
 <body>
-    <!--// Navigation/Start //-->
-    <header>
-        <div class="nav_logo">
-            <a href="../index.html" class="logo"><img src="../image/logo.png" alt="Logo"></a>
-            <div class="bx bx_menu"></div>
+        <!--// Navigation/Start //-->
+        <header class="container">
+            <div class="nav_logo">
+                <a href="" class="logo"><img src="../image/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="nav_menu">
+                <ul class="nav_list">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="Protfolio.html">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </div>
+        </header>
+        <!--// Navigation/End //-->
+
+    <!--// Portfolio Section/Start //-->
+    <section class="portfolio-section container">
+        <div class="text_center">
+            <h2>My Latest Work</h2>
+            <h4>Here are some of my recent projects.</h4>
         </div>
-        <div class="nav_menu">
-            <ul class="nav_list">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="Protfolio.html">Protfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="../image/poartfolio.jpg" alt="Portfolio Item 1">
+                <div class="portfolio-info">
+                    <h3>CoolExpert HVAC Website Design</h3>
+                    <p>A clean, conversion-focused website design for an HVAC services company, developed by Code With Shohag. The layout features a professional green-toned aesthetic, intuitive navigation, and clear call-to-actions to drive service bookings. This project highlights responsive design, trust-building UI elements, and optimized service presentation tailored for seasonal HVAC solutions.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="../image/poartfolio1.jpg" alt="Portfolio Item 2">
+                <div class="portfolio-info">
+                    <h3>Script Sage - Full Website Design & Branding Portfolio</h3>
+                    <p>A clean, modern, and professional website design for Script Sage, a digital solutions agency. This portfolio showcases a full web development project including UI/UX design, responsive layout, brand identity integration, and service presentation. The design emphasizes usability, brand clarity, and visual storytelling to boost digital success.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="../image/poartfolio2.jpg" alt="Portfolio Item 3">
+                <div class="portfolio-info">
+                    <h3>Shohag's sleek and professional portfolio webpage</h3>
+                    <p>Introducing Shohag's sleek and professional portfolio webpage, designed to showcase his work, skills, and projects. Built with passion and clean code, this platform invites collaboration and connection. Explore his creative journey and reach out to connect!</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
         </div>
-    </header>
-    <!--// Navigation/End //-->
+    </section>
+    <!--// Portfolio Section/End //-->
+
     <!--// Footer/Start //-->
-    <section class="end_section">
-        <h3>Shohag SR</h3>
+    <section class="end_section container">
+        <h3>Shohag</h3>
         <p>For more HTML, CSS, and coding Tamplate - please click on the <br > link below to subscribe to my channel oR UserName(shohag_sr989)</p>
         <div class="iconns">
             <a href="https://www.facebook.com/shohag.sr989/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -48,7 +101,9 @@
     <!--// Icon-Javascript/End //-->
     <!--// Custom-Javascript/Start //-->
     <script src="../js/script.js"></script>
+    <script src="../js/theme-toggle.js"></script>
     <!--// Custom-Javascript/End //-->
+    </div>
 </body>
 
 </html>

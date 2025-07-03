@@ -5,24 +5,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--// Custom-css-Links/Start //-->
-        <link rel="icon" type="image/x-icon" href="image/icon.png">
-        <link rel="stylesheet" href="responsive-css/responsive.css">
+        <link rel="shortcut icon" href="image/favIcon.png" type="image/x-icon">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="responsive-css/responsive.css">
+        <!-- Preload banner image for faster loading -->
+        <link rel="preload" as="image" href="image/banner.jpg">
         <!--// Custom-css-Links/End //-->
-        <title>Home/shohag_sr899PortfolioWebPage</title>
+        <title>shohag's Portfolio</title>
+        <!--// Icon-Javascript/Start //-->
+        <script src="https://kit.fontawesome.com/a42041f0f5.js" crossorigin="anonymous"></script>
+        <!--// Icon-Javascript/End //-->
     </head>
 
     <body>
         <!--// Navigation/Start //-->
-        <header>
+        <header class="container">
             <div class="nav_logo">
                 <a href="" class="logo"><img src="image/logo.png" alt="Logo"></a>
-                <div class="bx bx_menu"></div>
             </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
             <div class="nav_menu">
                 <ul class="nav_list">
                     <li>
-                        <a href="in">Home</a>
+                        <a href="./index.html">Home</a>
                     </li>
                     <li>
                         <a href="sub_pages/about.html">About</a>
@@ -34,11 +42,14 @@
                         <a href="sub_pages/contact.html">Contact</a>
                     </li>
                 </ul>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
             </div>
         </header>
         <!--// Navigation/End //-->
         <!--// Banner/Start //-->
-        <section class="banner" id="Banner">
+        <section class="banner container" id="Banner">
             <div class="banner_text">
                 <h3>Hello I'm</h3>
                 <h1>Shohag</h1>
@@ -46,10 +57,14 @@
                     <span class="auto_input"></span></h4>
                 <a href="#" class="btn">My Works</a>
             </div>
+            <div class="banner_image">
+                <img class="banner_image_img" src="image/Profile.png" alt="Banner Image">
+            </div>
+
         </section>
         <!--// Banner/End //-->
         <!--// About/Start //-->
-        <section class="about" id="about">
+        <section class="about container" id="about">
             <div class="about_img">
                 <img src="image/about.png" alt="Men Photo">
             </div>
@@ -65,41 +80,53 @@
         </section>
         <!--// About/End //-->
         <!--// Services/Start //-->
-        <section class="service" id="service">
+        <section class="service container" id="service">
             <div class="text_center">
                 <h2>My Services</h2>
                 <h4>We Work with You,Not for You</h4>
             </div>
             <div class="service_item">
                 <div class="service_box">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                    <h3>Web Design</h3>
-                    <p>Specializing in crafting intuitive and visually captivating web designs that enhance user experience and brand identity.</p>
+                    <div class="service-text-content">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <h3>Web Design</h3>
+                        <p>Specializing in crafting intuitive and visually captivating web designs that
+                            enhance user experience and brand identity.</p>
+                    </div>
                     <a href="#" class="s_btn">Read More</a>
                 </div>
                 <div class="service_box">
-                    <i class="fa-solid fa-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Building and optimizing web applications with the MANN stack, focusing on practical coding solutions, tips, and project showcases.</p>
+                    <div class="service-text-content">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Building and optimizing web applications with the MERN stack, focusing on
+                            practical coding solutions, tips, and project showcases.</p>
+                    </div>
                     <a href="#" class="s_btn">Read More</a>
                 </div>
                 <div class="service_box">
-                    <i class="fa-solid fa-pen-nib"></i>
-                    <h3>Graphic Design</h3>
-                    <p>Designing compelling visuals that communicate your message effectively, from logos to marketing materials.</p>
+                    <div class="service-text-content">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <h3>Graphic Design</h3>
+                        <p>Designing compelling visuals that communicate your message effectively, from
+                            logos to marketing materials.</p>
+                    </div>
                     <a href="#" class="s_btn">Read More</a>
                 </div>
                 <div class="service_box">
-                    <i class="fa-solid fa-photo-film"></i>
-                    <h3>Video Editing</h3>
-                    <p>Transforming raw footage into compelling videos under the banner of 'ScriptSage'. Let’s bring your story to life with creativity and precision.</p>
+                    <div class="service-text-content">
+                        <i class="fa-solid fa-photo-film"></i>
+                        <h3>Video Editing</h3>
+                        <p>Transforming raw footage into compelling videos under the banner of
+                            'ScriptSage'. Let’s bring your story to life with creativity and precision.</p>
+                    </div>
                     <a href="#" class="s_btn">Read More</a>
                 </div>
             </div>
         </section>
         <!--// Services/End //-->
         <!--// Contact/Start //-->
-        <section class="contact">
+        <section class="contact container">
             <div class="left_contect">
                 <div class="in">
                     <i class="fa fa-behance" aria-hidden="true"></i>
@@ -121,13 +148,16 @@
             <div class="right_contact">
                 <h2>Profiles</h2>
                 <a href="#">Hire Me</a>
-                <p>Are you looking for a passionate web developer and designer to bring your ideas to life? <br>Let's collaborate and create something amazing! Feel free to check out my work on the following platforms and reach out if you think we'd be a great fit!</p>
+                <p>Are you looking for a passionate web developer and designer to bring your
+                    ideas to life?
+                    <br>Let's collaborate and create something amazing! Feel free to check out my
+                        work on the following platforms and reach out if you think we'd be a great fit!</p>
             </div>
         </section>
         <!--// Contact/End //-->
         <!--// Footer/Start //-->
-        <section class="end_section">
-            <h3>Shohag SR</h3>
+        <section class="end_section container">
+            <h3>Shohag</h3>
             <p>For more HTML, CSS, and coding Template - please click on the
                 <br >
                 link below to subscribe to my channel oR UserName(shohag_sr989)</p>
@@ -151,15 +181,14 @@
         </section>
         <!--// Footer/End //-->
 
-        <!--// Icon-Javascript/Start //-->
-        <script src="https://kit.fontawesome.com/a42041f0f5.js" crossorigin="anonymous"></script>
-        <!--// Icon-Javascript/End //-->
-        <!--// tYPE/Start //-->
+        <!--// tYPE/Start -->
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        <!--// tYPE/End //-->
-        <!--// Custom-Javascript/Start //-->
+        <!--// tYPE/End -->
+        <!--// Custom-Javascript/Start -->
         <script src="js/script.js"></script>
-        <!--// Custom-Javascript/End //-->
-    </body>
+        <script src="js/theme-toggle.js"></script>
+        <!--// Custom-Javascript/End -->
+    </div>
+</body>
 
 </html>
