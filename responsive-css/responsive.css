@@ -60,23 +60,29 @@
 @media (max-width: 800px) {
     .nav_menu {
         display: none; /* Hide the main navigation on mobile */
-        flex-direction: row; /* Changed to row to align items horizontally */
-        justify-content: center; /* Center items horizontally */
-        align-items: center; /* Center items vertically */
-        background-color: var(--bg-color);
+        flex-direction: column; /* Changed to column to stack items vertically */
+        justify-content: flex-end; /* Justify content to the right */
+        align-items: flex-end; /* Align items to the right */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        backdrop-filter: blur(10px); /* Blurry effect */
+        border-radius: 25px; /* More rounded corners */
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: 110%; /* Add more space from the top */
+        right: 0;
         padding: 20px 0;
+        margin-right: 10px; /* Add some margin from the right edge */
+        max-height: 0; /* Initially hidden */
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out; /* Smooth transition */
     }
     .nav_menu.active {
         display: flex; /* Show the navigation when active */
+        max-height: 500px; /* Show the navigation when active */
     }
     .nav_list {
         flex-grow: 0;
-        justify-content: center;
-        flex-wrap: wrap; /* Allow items to wrap if space is limited */
+        flex-direction: column; /* Changed to column to stack items vertically */
+        align-items: center; /* Center items horizontally */
     }
     .nav_list li {
         margin: 10px 15px; /* Add some horizontal margin for spacing */
@@ -87,6 +93,9 @@
         cursor: pointer;
         color: var(--text-color);
         z-index: 1001;
+    }
+    .nav_menu.active .theme-toggle {
+        margin: 10px auto; /* Center the button horizontally */
     }
     .banner {
         flex-direction: column;
