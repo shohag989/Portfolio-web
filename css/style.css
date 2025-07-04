@@ -38,7 +38,10 @@
 
 .light-mode .glowing-text {
     background: linear-gradient(to right, #333, #00a878);
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
 }
 
 body {
