@@ -241,14 +241,28 @@ header {
 
 .about {
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     justify-content: center;
     align-items: center;
-    align-content: space-between;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    margin: 5% 0%;
+    gap: 4rem; /* Adjusted gap for better responsiveness */
     padding: 5% 10%;
+}
+
+.about_img,
+.about_text {
+    flex: 1 1 45%; /* Allow items to grow/shrink and take about 45% width */
+    max-width: 100%; /* Ensure they don't overflow */
+    text-align: center; /* Center content within these divs */
+}
+
+@media (max-width: 768px) {
+    .about_img,
+    .about_text {
+        flex: 1 1 100%; /* Stack items on smaller screens */
+    }
+    .about_img {
+        margin-bottom: 2rem; /* Add some space between image and text when stacked */
+    }
 }
 
 .about_img {
