@@ -60,6 +60,28 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // --- New Portfolio Popup Logic ---
+    const popup = document.getElementById('new-portfolio-popup');
+    const closePopup = document.querySelector('.close-popup');
+
+    if (popup) {
+        // Show popup after a short delay for smoother effect
+        setTimeout(() => {
+            popup.classList.add('show');
+        }, 1200);
+
+        closePopup.addEventListener('click', () => {
+            popup.classList.remove('show');
+        });
+
+        // Close when clicking outside the content
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('show');
+            }
+        });
+    }
 });
 
 const menuIcon = document.querySelector('.menu-icon');
